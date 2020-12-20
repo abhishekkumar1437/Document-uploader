@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signin Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" type="image/png" href="image/icon.png"/>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/b.tech.css">
+        
+    </head>
+    <body class="bg-gray-900" style="transition: 0.8s;">
+        <section class="text-gray-500 bg-gray-900 body-font relative">
+            <div class="container px-5 py-24 mx-auto justify-center flex">
+              <form class="lg:w-1/2 md:w-1/1 bg-gray-900 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-5 bg-gray-600" style="border-radius: 25px;
+              background: #1a202c;
+              box-shadow:  25px 25px 50px #0f131a, 
+                           -25px -25px 50px #252d3e;" action="signin.php" onsubmit = "return validation()" name="f1" method="post">
+            
+
+                <label for="email"><b>Email</b></label>
+                <input class="bg-gray-800 text-white rounded border border-gray-700 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" placeholder="Enter Email" type="text" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input class="bg-gray-800 text-white rounded border border-gray-700 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" id="btnn" placeholder="Enter Password" type="password" name="psw" required>
+                
+                <button class="text-white bg-indigo-500 border-0 py-2 px-12 focus:outline-none hover:bg-indigo-600 rounded text-lg signupbtn" type="submit" name="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" class="mt-4"> Remember me
+                </label>
+                
+                
+                <p class="text-xs text-gray-600 mt-3"></p>
+                <div class="container">
+                    <a href="index.html" class="px-4 py-2 bg-red-500 text-white hover:bg-red-600 rounded text-lg text-decoration-none"><button type="button" onclick="document.getElementById('id01').style.display='none'" class="w-auto pt-2 pr-18">Cancel</button></a>
+                    <span class="pt-2 float-right">Forgot <a class="text-decoration-none text-indigo-500 hover:text-gray-600" href="enter_email111.html">password?</a></span>
+                  </div>
+            </form>
+            </div>
+          </section>
+          <script>  
+            function validation()  
+            {  
+                var id=document.f1.email.value;  
+                var ps=document.f1.psw.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script> 
+    </body>
+</html>
